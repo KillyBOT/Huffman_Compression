@@ -4,11 +4,11 @@ else
 	CC = gcc
 endif
 
-all: HLZ.o
-	$(CC) -o HLZ HLZ.o
+all: Huffman.o
+	$(CC) -o Huffman Huffman.o
 
-HLZ.o: HLZ.c HLZ.h
-	$(CC) -c HLZ.c
+Huffman.o: Huffman.c Huffman.h
+	$(CC) -c Huffman.c
 
 clean:
 	rm *.o
