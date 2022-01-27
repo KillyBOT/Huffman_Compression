@@ -1,14 +1,15 @@
 ifeq ($(DEBUG),true)
-	CC = gcc -g
+	CC = gcc -g -Wall
 else
 	CC = gcc
 endif
 
-all: huffman.o
-	$(CC) -o huffman huffman.o
+CFLAG = -Wall
+
+huffman: huffman.o
 
 huffman.o: huffman.c huffman.h
-	$(CC) -c huffman.c
 
+.PHONY: clean
 clean:
 	rm *.o
